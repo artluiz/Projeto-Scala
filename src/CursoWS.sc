@@ -6,4 +6,7 @@ ehImpar(10)
 
 val lista = List(1,2,3,4,5)
 
-val listaPares = lista.filter(x => ehPar(x))
+lista.filter(x => ehPar(x))
+lista.filterNot(x => ehPar(x))
+
+lista.map(x => x*2)
