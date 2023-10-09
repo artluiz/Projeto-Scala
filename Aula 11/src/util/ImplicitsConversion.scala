@@ -13,13 +13,13 @@ object ImplicitsConversion {
 //  implicit def localDateToString(localDate: LocalDate): String =
 //    localDate.format(pattern)
   implicit class StringUtils(str: String){
-    implicit def stringToLocalDate = {
+    implicit def stringToLocalDate: LocalDate = {
       LocalDate.parse(str, pattern)
     }
   }
 
   implicit class localDateUtils(localDate: LocalDate) {
-    implicit def localDateToString =
+    implicit def localDateToString: String =
     localDate.format(pattern)
   }
 }
